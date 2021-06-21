@@ -8,7 +8,7 @@ import "./App.css";
 import CalculatorForm from "./Components/calculator-form/calculatorForm";
 import NavBar from "./Components/navbar";
 import ResultArea from "./Components/result-area/resultArea";
-import { getAmountToProvide, calculateAmountToProvide } from "./api/uniswapSdk";
+import { calculateAmountToProvide } from "./api/uniswapSdk";
 import ResultSpinner from "./Components/result-area/resultSpinner";
 
 const AppWrapper = styled.div`
@@ -42,7 +42,6 @@ class App extends Component {
 
     componentDidMount() {
         // Initial Calculation based on default fields
-        // getAmountToProvide(5000, 1000, 3000, 500, 15).then(console.log);
         this.updateRecommendation();
     }
 

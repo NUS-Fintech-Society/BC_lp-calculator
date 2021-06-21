@@ -20,11 +20,11 @@ export default async function getBollingerBand(
     num_std_dev = 2
 ) {
     if (!Number.isInteger(data_points) || data_points < 1) {
-        console.log("error 1");
+        // console.log("error 1");
         return -1;
     }
     if (timeframe_type !== 0 && timeframe_type !== 1 && timeframe_type !== 2) {
-        console.log("error 2");
+        // console.log("error 2");
         return -1;
     }
     let base_api_url = "https://min-api.cryptocompare.com/data/v2/";
@@ -46,7 +46,7 @@ export default async function getBollingerBand(
     base_api_url += "&api_key=cc61fbdbd2735f2b9f844da1ef6f06f35da34427fec26a9549878a8041547624";
     const response = await axios.get(base_api_url);
     if (response["data"]["Response"] !== "Success") {
-        console.log("error 3");
+        // console.log("error 3");
         return -1;
     }
     let data = response["data"]["Data"]["Data"];
